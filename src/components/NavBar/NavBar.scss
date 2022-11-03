@@ -14,8 +14,11 @@ input, textarea {
         color: black;
     }
 
+.navigation {
+    padding: 1rem 0;
+}
+
 .nav {
-    padding: 1rem 0 0 0;
    
     @include tablet {
         display: flex;

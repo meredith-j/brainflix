@@ -1,0 +1,19 @@
+@use '../../styles/partials/breakpoints' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/colours' as *;
+
+.video {
+    background-color: $dark-black;
+    height: auto;
+    width: 100%;
+    z-index: 1;
+
+    &__featured {
+        height: auto;
+        width: 100%;
+        z-index: 20;
+        object-fit: contain;
+    }
+
+}
