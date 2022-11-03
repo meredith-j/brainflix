@@ -12,7 +12,7 @@ function NavBar() {
             </a>
         </section>
         <section className='nav__options'>
-            <input type="text" placeholder="Search.." />
+            <input className="nav__search" type="text" placeholder="Search" />
             <button className='nav__upload'>Upload</button>
         </section>
         <div className='nav__user-info'>
