@@ -1,0 +1,87 @@
+@use '../../styles/partials/breakpoints' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/colours' as *;
+
+input, textarea {
+        font-family: 'Avenir';
+        width: 80%;
+        margin: 1.25rem 0 1rem 3%;
+        padding: 0.75rem 0 0.75rem 0.75rem;
+        font-size: 1.25rem;
+        border-radius: 0.5rem;
+        background-color: #FAFAFA;
+        color: black;
+    }
+
+.nav {
+    padding: 1rem 0 0 0;
+   
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__logo {
+        display: block;
+        height: 2.5rem;
+        margin: auto;
+    }
+
+    &__options {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__search {
+        :focus {
+            outline-color: solid silver 0.1rem;
+        }
+
+        width: 76%;
+        margin: 1.25rem 0 1rem 4%;
+        padding: 1.1rem 0 1.1rem 1.1rem;
+        font-size: 1.25rem;
+        border-radius: 0.5rem;
+        border: solid silver 0.1rem;
+        background-color: #FAFAFA;
+    }
+
+    &__upload {
+        width: 91%;
+        margin: 0 0 0 4%;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        background-color: $blue;
+        color: white;
+        border: none;
+        border-radius: 0.5rem;
+        padding: 1.25rem;
+        font-weight: 400;
+    }
+
+    &__user-info {
+        position: absolute;
+        left: 83%;
+        top: 4.85rem;
+        width: 5rem;
+
+    /*    @include tablet {
+            padding: 2.25rem 0 0 0;
+        }
+    } */
+    }
+
+    &__user-photo {
+        height: 3.75rem;
+        width: 3.75rem;
+        border-radius: 2rem;
+        object-position: left;
+        object-fit: cover;
+
+    /*    @include tablet {
+            height: 3.5rem;
+            width: 3.5rem;
+        }*/
+    }
+}

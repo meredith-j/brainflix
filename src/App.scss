@@ -1,7 +1,7 @@
-@use './styles/partials/breakpoints';
-@use './styles/partials/fonts';
-@use './styles/partials/mixins';
-@use './styles/partials/_colours';
+@use './styles/partials/breakpoints' as *;
+@use './styles/partials/fonts' as *;
+@use './styles/partials/mixins' as *;
+@use './styles/partials/colours' as *;
 
 body {
     font-family: 'Avenir';
