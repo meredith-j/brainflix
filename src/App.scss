@@ -1,0 +1,14 @@
+@use './styles/partials/breakpoints';
+@use './styles/partials/fonts';
+@use './styles/partials/mixins';
+@use './styles/partials/_colours';
+
+body {
+    font-family: 'Avenir';
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
