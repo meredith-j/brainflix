@@ -1,0 +1,43 @@
+@use '../../styles/partials/_breakpoints';
+@use '../../styles/partials/_fonts';
+@use '../../styles/partials/_mixins';
+@use '../../styles/partials/_colours';
+
+.nav {
+
+/*    @include tablet {
+        display: flex;
+        flex-direction: row;
+    }
+*/
+    &__logo {
+        display: block;
+        height: 2rem;
+        margin: auto;
+    }
+
+    &__user-info {
+//        position: absolute;
+        padding: 2.25rem 0 0 0.5rem;
+        height: 21.5rem;
+        width: 4.5rem;
+
+    /*    @include tablet {
+            padding: 2.25rem 0 0 0;
+        }
+    } */
+    }
+
+    &__user-photo {
+        height: 3.25rem;
+        width: 3.25rem;
+        border-radius: 2rem;
+        object-position: left;
+        object-fit: cover;
+
+    /*    @include tablet {
+            height: 3.5rem;
+            width: 3.5rem;
+        }*/
+    }
+}
