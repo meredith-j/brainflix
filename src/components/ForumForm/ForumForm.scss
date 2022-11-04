@@ -1,0 +1,31 @@
+@use '../../styles/partials/breakpoints' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/colours' as *;
+
+.forum-form {
+    &__image-container {
+    //position: absolute;
+    left: 83%;
+    top: 4.85rem;
+    width: 5rem;
+
+    @include tablet {
+        padding: 2.25rem 0 0 0;
+    }
+
+}
+
+&__image {
+    height: 3.75rem;
+    width: 3.75rem;
+    border-radius: 2rem;
+    object-position: left;
+    object-fit: cover;
+
+    @include tablet {
+        height: 3.5rem;
+        width: 3.5rem;
+    }
+}
+}
