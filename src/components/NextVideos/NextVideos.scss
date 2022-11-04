@@ -1,0 +1,13 @@
+@use '../../styles/partials/breakpoints' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/colours' as *;
+
+
+.next-videos {
+    &__poster {
+        object-fit: cover;
+        width: 10rem;
+        height: 6rem;
+    }
+}
