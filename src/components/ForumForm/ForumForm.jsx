@@ -3,21 +3,21 @@ import imgUser from '../../assets/images/Mohan-muruge.jpg';
 
 function ForumForm () {
     return (
-            <section class="forum-form">
-                <h2 class="forum-form__heading">Join the Conversation</h2>
-                    <div class="forum-form__container">
-                        <form id="newComment" class="forum-form__form">
-                            <div class="forum-form__image-container">
-                                <img class="forum-form__image" src={ imgUser } alt="your profile image" />
+            <section className="forum-form">
+                <h2 className="forum-form__heading">Join the Conversation</h2>
+                    <div className="forum-form__container">
+                        <form id="newComment" className="forum-form__form">
+                            <div className="forum-form__image-container">
+                                <img className="forum-form__image" src={ imgUser } alt="your profile image" />
                             </div>
 
-                            <div class="forum-form__user-container">
-                                <div class="forum-form__comment-container">
-                                    <textarea name="comment" id="comment" class="forum-form__draft" placeholder="Add a new comment"></textarea>
+                            <div className="forum-form__user-container">
+                                <div className="forum-form__comment-container">
+                                    <textarea name="comment" id="comment" className="forum-form__draft" placeholder="Add a new comment"></textarea>
                                 </div>
 
-                                <div class="forum-form__submit-container">
-                                    <button class="comment__submit">Comment</button>
+                                <div className="forum-form__submit-container">
+                                    <button className="comment__submit">Comment</button>
                                 </div>
                             </div>
                         </form>
