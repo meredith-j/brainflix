@@ -3,13 +3,16 @@ import { useState } from 'react';
 import NavBar from './components/NavBar/NavBar';
 import Video from './components/Video/Video';
 import VideoInfo from './components/VideoInfo/VideoInfo';
-//import videos from './data/videos.json';
+import NextVideos from './components/NextVideos/NextVideos';
+import videos from './data/videos.json';
 import videoDetails from './data/video-details.json';
 
 function App() {
 
   const [ featuredVideo, setFeaturedVideo ] = useState(videoDetails[0])
 
+  const videosCopy = [...videos]
+  //videosCopy.splice(videosCopy.indexOf(selectedVideo), 1)
 
   return (
     <>
@@ -19,6 +22,9 @@ function App() {
     />
     <VideoInfo 
     featuredVideo= { featuredVideo }
+    />
+    <NextVideos 
+    videos = { videosCopy }
     />
     </>
   );
