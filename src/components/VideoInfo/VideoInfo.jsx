@@ -10,7 +10,7 @@ function VideoInfo ( { featuredVideo } ) {
                 <h1 className="video-info__title">{ featuredVideo.title }</h1>
                 <section className='video-info__details'>
                     <section className='video-info__post-info'>
-                        <p className='video-info__channel'>{ featuredVideo.channel}</p>
+                        <p className='video-info__channel'>{ featuredVideo.channel }</p>
                         <p className='video-info__date'>{ new Date(featuredVideo.timestamp).toLocaleDateString() }</p>
                     </section>
                     <section className='video-info__engagement'>
@@ -30,4 +30,4 @@ function VideoInfo ( { featuredVideo } ) {
     )
 }
 
- export default VideoInfo;
+export default VideoInfo;
