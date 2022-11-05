@@ -5,7 +5,7 @@ function Video ( { featuredVideo } ) {
     return (
         <>
             <div className='video'>
-                <video className='video__featured' controls poster={ featuredVideo.image } alt={ featuredVideo.title } type="image/jpg">
+                <video className='video__selected' controls poster={ featuredVideo.image } alt={ featuredVideo.title } type="image/jpg">
                 </video>
             </div>
         </>
