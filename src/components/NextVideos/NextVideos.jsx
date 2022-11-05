@@ -10,7 +10,7 @@ function NextVideos ( { videos, changeFeaturedVideo } ) {
                 { videos.map((video) => {
                     return (
                         <article onClick={()=>{ return changeFeaturedVideo(video.id)}} className="next-videos__card" key={ video.id }>
-                            <img className="next-videos__poster" key={ video.id } src={ video.image } alt={ video.title } />
+                            <img className="next-videos__thumbnail" key={ video.id } src={ video.image } alt={ video.title } />
                             <h4 className='next-videos__title'>{ video.title }</h4>
                             <p className='next-videos__channel'>{ video.channel }</p>
                         </article>      
