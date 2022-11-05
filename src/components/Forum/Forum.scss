@@ -1,0 +1,13 @@
+@use '../../styles/partials/breakpoints' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/colours' as *;
+
+.forum {
+    &__image {
+        background-color: $mercury;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 1.5rem;
+    }
+}

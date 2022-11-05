@@ -11,7 +11,7 @@ function VideoInfo ( { featuredVideo } ) {
 
         let mm = date.getMonth() + 1; // Months start at 0!
         let dd = date.getDate();
-        let yyyy = date.getYear();
+        let yyyy = date.getFullYear();
 
         if (mm < 10) {
             mm = `0${mm}`
@@ -32,7 +32,7 @@ function VideoInfo ( { featuredVideo } ) {
                 <h1 className="video-info__title">{ featuredVideo.title }</h1>
                 <section className='video-info__info'>
                     <section className='video-info__details'>
-                        <p className='video-info__featured'>{ featuredVideo.channel }</p>
+                        <p className='video-info__featured'>By { featuredVideo.channel }</p>
                         <p className='video-info__detail'>{ formatDate(featuredVideo.timestamp) }</p>
                     </section>
                     <section className='video-info__details'>

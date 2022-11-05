@@ -10,7 +10,7 @@ function Forum ( { featuredVideo } ) {
 
         let mm = date.getMonth() + 1; // Months start at 0!
         let dd = date.getDate();
-        let yyyy = date.getYear();
+        let yyyy = date.getFullYear();
 
         if (mm < 10) {
             mm = `0${mm}`
@@ -19,6 +19,8 @@ function Forum ( { featuredVideo } ) {
         if (dd < 10) {
             dd = `0${dd}`
         }
+
+        console.log(yyyy)
 
         const commentDate = `${mm}/${dd}/${yyyy}`;
     
@@ -35,16 +37,15 @@ function Forum ( { featuredVideo } ) {
             })
 */    
             return (
-                <article className="forum-comment__card" key={ comment.id }>
-                    <div className='forum-comment__image'>
-                        <img className="forum-comment_photo" alt={ comment.name } />
+                <article className="forum__card" key={ comment.id }>
+                    <div className='forum__image'>
                     </div>
-                    <div className='forum-comment__name-date'>
-                        <p className='forum-comment__name'>{ comment.name }</p>
-                        <p className='forum-comment__date'>{ formatDate(comment.timestamp) }</p>
+                    <div className='forum__name-date'>
+                        <p className='forum__name'>{ comment.name }</p>
+                        <p className='forum__date'>{ formatDate(comment.timestamp) }</p>
                     </div>
-                    <div className='forum-comment__details'>
-                        <p className='forum-comment__comment'>{ comment.comment }</p>
+                    <div className='forum__details'>
+                        <p className='forum__comment'>{ comment.comment }</p>
                     </div>
                 </article>      
             )
