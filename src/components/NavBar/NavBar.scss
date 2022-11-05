@@ -4,6 +4,9 @@
 @use '../../styles/partials/colours' as *;
 
 input, textarea {
+    ::placeholder {
+        color: $black;
+    }
         font-family: 'Avenir';
         width: 80%;
         margin: 1.25rem 0 1rem 3%;
@@ -11,7 +14,11 @@ input, textarea {
         font-size: 1.25rem;
         border-radius: 0.5rem;
         background-color: #FAFAFA;
-        color: black;
+        background-image: url('../../assets/icons/search.svg');
+        background-repeat: no-repeat;
+        background-size: 1.75rem;
+        background-position: 1rem;
+        outline: none;
     }
 
 .navbar {
@@ -34,17 +41,14 @@ input, textarea {
     }
 
     &__search {
-        :focus {
-            outline-color: solid silver 0.1rem;
-        }
-
         width: 76%;
         margin: 1.25rem 0 1rem 4%;
-        padding: 1.1rem 0 1.1rem 1.1rem;
+        padding: 1.1rem 0 1.1rem 3.25rem;
         font-size: 1.25rem;
         border-radius: 0.5rem;
-        border: solid silver 0.1rem;
+        border: solid $mercury 0.15rem;
         background-color: #FAFAFA;
+  
     }
 
     &__upload {
