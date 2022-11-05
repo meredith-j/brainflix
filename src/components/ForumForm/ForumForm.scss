@@ -3,29 +3,85 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/colours' as *;
 
+textarea {
+    ::placeholder {
+        color: $black;
+    }
+        font-family: 'Avenir';
+        width: 80%;
+        margin: 0;
+        padding: 0.75rem 0 0.75rem 0.75rem;
+        font-size: 1.25rem;
+        border-radius: 0.5rem;
+        background-color: #FAFAFA;
+        outline: none;
+    }
+
 .forum-form {
-    &__image-container {
-    //position: absolute;
-    left: 83%;
-    top: 4.85rem;
-    width: 5rem;
+    padding: 1rem 2rem;
 
-    @include tablet {
-        padding: 2.25rem 0 0 0;
+    &__form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.25rem;
+    width: 100%;
+    border-bottom: 0.1rem solid $mercury;
+    }
+    
+    &__container {
+        display: flex;
+        flex-direction: column;
+
+    // @include tablet {
+    //     padding: 2.25rem 0 0 0;
+    // }
     }
 
-}
+    &__image {
+        height: 3.75rem;
+        width: 3.75rem;
+        border-radius: 2rem;
+        object-position: left;
+        object-fit: cover;
+        margin: 2.2rem 0;
 
-&__image {
-    height: 3.75rem;
-    width: 3.75rem;
-    border-radius: 2rem;
-    object-position: left;
-    object-fit: cover;
-
-    @include tablet {
-        height: 3.5rem;
-        width: 3.5rem;
+        @include tablet {
+            height: 3.5rem;
+            width: 3.5rem;
+        }
     }
-}
+
+    &__heading {
+        padding: 0 0 0.25rem 0;
+    }
+
+    &__draft {
+        font-family: 'Avenir';
+        margin: 0;
+        width: 72vw;
+        padding: 0.75rem 0 0.75rem 0.75rem;
+        font-size: 1.25rem;
+        border-radius: 0.5rem;
+        background-color: #FAFAFA;
+        border: 0.1rem solid $mercury;
+        outline: none;
+    }
+
+    &__submit {
+        width: 72vw;
+        margin: 1.5rem 0;
+        text-transform: uppercase;
+        font-size: 1.3rem;
+        background-color: $blue;
+        color: white;
+        border: none;
+        border-radius: 0.5rem;
+        padding: 1.25rem;
+        font-weight: 400;
+        background-image: url('../../assets/icons/add_comment.svg');
+        background-repeat: no-repeat;
+        background-size: 2rem;
+        background-position: 1rem;
+    }
 }

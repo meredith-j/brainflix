@@ -3,7 +3,7 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/colours' as *;
 
-input, textarea {
+input {
     ::placeholder {
         color: $black;
     }
@@ -19,7 +19,7 @@ input, textarea {
         background-size: 1.75rem;
         background-position: 1rem;
         outline: none;
-    }
+}
 
 .navbar {
     padding: 1rem 0;
