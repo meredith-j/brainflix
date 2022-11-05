@@ -37,16 +37,16 @@ function VideoInfo ( { featuredVideo } ) {
                     </section>
                     <section className='video-info__details'>
                         <section className='video-info__engagement'>
-                            <img className='video-info__icon' src={views} />
+                            <img className='video-info__views' src={views} />
                             <p className='video-info__detail'>{ featuredVideo.views }</p>
                         </section>
                         <section className='video-info__engagement'>
-                            <img className='video-info__icon' src={likes} />
+                            <img className='video-info__likes' src={likes} />
                             <p className='video-info__detail'>{ featuredVideo.likes }</p>
                         </section>
                     </section>
-                    <p className='video-info__description'> { featuredVideo.description } </p>
                 </section>
+                    <p className='video-info__description'> { featuredVideo.description } </p>
             </div>
         </>
     )

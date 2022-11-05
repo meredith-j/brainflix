@@ -3,3 +3,54 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/colours' as *;
 
+.video-info {
+    padding: 2rem;
+
+    &__title {
+        padding: 0 0 1.75rem 0;
+        border-bottom: 0.1rem solid $mercury;
+    }
+
+    &__info {
+        padding: 1.5rem 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 8rem;
+        border-bottom: 0.1rem solid $mercury;
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 1.5rem;
+    }
+
+    &__featured {
+        font-weight: 600;
+    }
+
+    &__detail {
+        color: $silver;
+    }
+
+    &__engagement {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__views {
+        width: 2rem;
+        margin: 0 0.75rem 0 0;
+    }
+
+    &__likes {
+        width: 1.5rem;
+        margin: 0 0.75rem 0 0;
+    }
+
+    &__description {
+        padding: 1.5rem 0 0 0;
+    }
+}
