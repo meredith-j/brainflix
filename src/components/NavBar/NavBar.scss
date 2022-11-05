@@ -62,6 +62,10 @@ input {
         border-radius: 0.5rem;
         padding: 1.25rem;
         font-weight: 400;
+        background-image: url('../../assets/icons/upload.svg');
+        background-repeat: no-repeat;
+        background-position: 1rem;
+        background-size: 2rem;
     }
 
     &__user-info {
