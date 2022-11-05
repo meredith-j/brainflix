@@ -23,8 +23,6 @@ function VideoInfo ( { featuredVideo } ) {
 
         const commentDate = `${mm}/${dd}/${yyyy}`;
     
-        console.log(commentDate);
-
         return commentDate;
     }
 
@@ -32,19 +30,19 @@ function VideoInfo ( { featuredVideo } ) {
         <>
             <div className='video-info'>
                 <h1 className="video-info__title">{ featuredVideo.title }</h1>
-                <section className='video-info__details'>
-                    <section className='video-info__post-info'>
-                        <p className='video-info__channel'>{ featuredVideo.channel }</p>
-                        <p className='video-info__date'>{ formatDate(featuredVideo.timestamp) }</p>
+                <section className='video-info__info'>
+                    <section className='video-info__details'>
+                        <p className='video-info__featured'>{ featuredVideo.channel }</p>
+                        <p className='video-info__detail'>{ formatDate(featuredVideo.timestamp) }</p>
                     </section>
-                    <section className='video-info__engagement'>
-                        <section className='video-info__views'>
+                    <section className='video-info__details'>
+                        <section className='video-info__engagement'>
                             <img className='video-info__icon' src={views} />
-                            <p className='video-info__data'>{ featuredVideo.views }</p>
+                            <p className='video-info__detail'>{ featuredVideo.views }</p>
                         </section>
-                        <section className='video-info__likes'>
+                        <section className='video-info__engagement'>
                             <img className='video-info__icon' src={likes} />
-                            <p className='video-info__data'>{ featuredVideo.likes }</p>
+                            <p className='video-info__detail'>{ featuredVideo.likes }</p>
                         </section>
                     </section>
                     <p className='video-info__description'> { featuredVideo.description } </p>

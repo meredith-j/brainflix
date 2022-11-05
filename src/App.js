@@ -11,7 +11,8 @@ import videoDetails from './data/video-details.json';
 function App() {
 
   const [ featuredVideo, setFeaturedVideo ] = useState(videoDetails[0])
-
+  //in future sprints: we will need to add setVideoObjects to the below const
+  const [ videoObjects ] = useState(videos)
 
   function changeFeaturedVideo (videoId) {
     const selectedVideo =  videoDetails.find((video)=>{
@@ -20,11 +21,11 @@ function App() {
     setFeaturedVideo(selectedVideo)
   }
 
-  const removeSelectedVideo =  videos.find((video)=>{
+  const removeSelectedVideo =  videoObjects.find((video)=>{
     return video.id === featuredVideo.id
   })
 
-  const videosCopy = [...videos]
+  const videosCopy = [...videoObjects]
   videosCopy.splice(videosCopy.indexOf(removeSelectedVideo), 1)
 
   return (
