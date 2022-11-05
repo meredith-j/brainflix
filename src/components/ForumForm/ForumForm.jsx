@@ -4,6 +4,7 @@ import imgUser from '../../assets/images/Mohan-muruge.jpg';
 function ForumForm () {
     return (
             <section className="forum-form">
+                
                     <div className="forum-form__container">
                         <form id="newComment" className="forum-form__form">
                             <div className="forum-form__container">

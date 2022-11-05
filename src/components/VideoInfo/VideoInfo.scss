@@ -4,7 +4,7 @@
 @use '../../styles/partials/colours' as *;
 
 .video-info {
-    padding: 2rem;
+    padding: 2rem 2rem 1rem 2rem;
 
     &__title {
         padding: 0 0 1.75rem 0;
@@ -52,5 +52,10 @@
 
     &__description {
         padding: 1.5rem 0 0 0;
+    }
+
+    &__comments {
+        font-weight: 600;
+        padding: 2rem 0 0 0;
     }
 }

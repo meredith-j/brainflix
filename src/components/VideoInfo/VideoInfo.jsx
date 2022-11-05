@@ -47,6 +47,7 @@ function VideoInfo ( { featuredVideo } ) {
                     </section>
                 </section>
                     <p className='video-info__description'> { featuredVideo.description } </p>
+                    <p className='video-info__comments'>{ featuredVideo.comments.length } Comments</p>
             </div>
         </>
     )

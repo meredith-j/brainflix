@@ -20,8 +20,6 @@ function Forum ( { featuredVideo } ) {
             dd = `0${dd}`
         }
 
-        console.log(yyyy)
-
         const commentDate = `${mm}/${dd}/${yyyy}`;
     
         return commentDate;
