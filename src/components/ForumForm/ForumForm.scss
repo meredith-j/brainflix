@@ -26,7 +26,6 @@ textarea {
     justify-content: center;
     gap: 1.25rem;
     width: 100%;
-    border-bottom: 0.1rem solid $mercury;
     }
     
     &__container {
@@ -70,7 +69,7 @@ textarea {
 
     &__submit {
         width: 72vw;
-        margin: 1.5rem 0;
+        margin: 1.5rem 0 0.5rem 0;
         text-transform: uppercase;
         font-size: 1.3rem;
         background-color: $blue;

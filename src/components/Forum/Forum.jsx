@@ -31,23 +31,24 @@ function Forum ( { featuredVideo } ) {
         <>
         <ForumForm />
         { featuredVideo.comments.map((comment) => {
-
-/*            comment.sort(function(x, y) {
-                return new Date(y.timestamp) - new Date(x.timestamp);
-            })
-*/    
+               
             return (
-                <article className="forum__card" key={ comment.id }>
-                    <div className='forum__image'>
-                    </div>
-                    <div className='forum__name-date'>
-                        <p className='forum__name'>{ comment.name }</p>
-                        <p className='forum__date'>{ formatDate(comment.timestamp) }</p>
-                    </div>
-                    <div className='forum__details'>
-                        <p className='forum__comment'>{ comment.comment }</p>
-                    </div>
-                </article>      
+                <div className='forum'>
+                    <article className="forum__container" key={ comment.id }>
+                        <div className='forum__image'>
+                            <div className='forum__photo' alt={ comment.name }></div>
+                        </div>
+                        <div className='forum__details'>
+                            <div className='forum__name-date'>
+                                <p className='forum__name'>{ comment.name }</p>
+                                <p className='forum__date'>{ formatDate(comment.timestamp) }</p>
+                            </div>
+                            <div className='forum__details'>
+                                <p className='forum__comment'>{ comment.comment }</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             )
         })}
         </>
