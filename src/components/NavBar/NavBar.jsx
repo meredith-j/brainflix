@@ -3,21 +3,21 @@ import App from '../../App';
 import imgUser from '../../assets/images/Mohan-muruge.jpg';
 import '../NavBar/NavBar.scss';
 
-function NavBar() {
+function NavBar( { App } ) {
     return (
       <>
-        <div className='navigation'>
-            <section className="nav">
-                <a className='nav__link' href={App}>
-                    <img className="nav__logo" src={imgLogo} alt="Your profile picture" />
+        <div className='navbar'>
+            <section className="navbar__heading">
+                <a className='navbar__link' href={ App }>
+                    <img className="navbar__logo" src={imgLogo} alt="Your profile picture" />
                 </a>
             </section>
-            <section className='nav__options'>
-                <input className="nav__search" id="search" type="text" placeholder="Search" />
-                <button className='nav__upload'>Upload</button>
+            <section className='navbar__options'>
+                <input className="navbar__search" id="search" type="text" placeholder="Search" />
+                <button className='navbar__upload'>Upload</button>
             </section>
-            <div className='nav__user-info'>
-                <img className='nav__user-photo' src={imgUser}/>
+            <div className='navbar__user-info'>
+                <img className='navbar__user-photo' src={imgUser}/>
             </div>
         </div>
       </>
