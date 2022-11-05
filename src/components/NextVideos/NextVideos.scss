@@ -5,9 +5,39 @@
 
 
 .next-videos {
+    border-top: 0.1rem solid $mercury;
+    margin: 0 2rem 1.5rem 2rem;
+
+    &__header {
+        padding: 1.5rem 0;
+    }
+
+    &__card {
+        padding: 0 0 1.5rem 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+    
+    &__video {
+        width: 10rem;
+        height: 6rem;
+    }
+
     &__thumbnail {
         object-fit: cover;
         width: 10rem;
         height: 6rem;
+        border-radius: 0.5rem;
+    }
+
+    &__title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        padding: 0 0 0.2rem 0;
     }
 }
