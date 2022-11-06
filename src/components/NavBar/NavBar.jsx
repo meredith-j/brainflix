@@ -12,13 +12,15 @@ function NavBar( { App } ) {
                     <img className="navbar__logo" src={imgLogo} alt="Your profile picture" />
                 </a>
             </section>
-            <section className='navbar__options'>
-                <input className="navbar__search" id="search" type="text" placeholder="Search" />
-                <button className='navbar__upload'>Upload</button>
+            <section className='navbar__items'>
+              <section className='navbar__options'>
+                  <input className="navbar__search" id="search" type="text" placeholder="Search" />
+                  <button className='navbar__upload'>Upload</button>
+              </section>
+              <div className='navbar__user-info'>
+                  <img className='navbar__user-photo' src={imgUser}/>
+              </div>
             </section>
-            <div className='navbar__user-info'>
-                <img className='navbar__user-photo' src={imgUser}/>
-            </div>
         </div>
       </>
     );
