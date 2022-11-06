@@ -41,10 +41,10 @@ h2 {
     color: $silver;
     text-transform: uppercase;
 
-    // @include tablet {
-    //     font-size: 3.25rem;
-    //     font-weight: 600;
-    // }
+    @include tablet {
+        font-size: 1rem;
+        font-weight: 600;
+    }
 
     // @include desktop {
     //     font-size: 2.68rem;

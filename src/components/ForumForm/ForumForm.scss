@@ -20,21 +20,30 @@ textarea {
 .forum-form {
     padding: 1rem 2rem;
 
+    @include tablet {
+    padding: 1rem 2rem 0 2rem;
+    }
+
     &__form {
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 1.25rem;
     width: 100%;
+
+    @include tablet {
+        justify-content: flex-start;
+        gap: 0.5rem;
+        }
     }
     
     &__container {
         display: flex;
         flex-direction: column;
 
-    // @include tablet {
-    //     padding: 2.25rem 0 0 0;
-    // }
+    @include tablet {
+        flex-direction: row;
+        }
     }
 
     &__image {
@@ -65,6 +74,12 @@ textarea {
         background-color: #FAFAFA;
         border: 0.1rem solid $mercury;
         outline: none;
+
+        @include tablet {
+            width: 10rem;
+            height: 3.5rem;
+            width: 55vw;
+        }
     }
 
     &__submit {
@@ -82,5 +97,10 @@ textarea {
         background-repeat: no-repeat;
         background-size: 2rem;
         background-position: 1rem;
+        
+        @include tablet {
+            width: 30vw;
+            margin: 2rem 0 0 0.5rem;
+        }
     }
 }
