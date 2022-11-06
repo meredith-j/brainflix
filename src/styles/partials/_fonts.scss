@@ -19,11 +19,11 @@
 //video title
 h1 {
     font-size: 2.25rem;
-    font-weight: 400;
+    font-weight: 600;
 
     @include tablet {
         font-size: 2.5rem;
-        font-weight: 400;
+        font-weight: 600;
     }
 }
 
@@ -39,11 +39,6 @@ h2 {
         font-size: 1rem;
         font-weight: 600;
     }
-
-    // @include desktop {
-    //     font-size: 2.68rem;
-    //     font-weight: 600;
-    // }
 }
 
 // titles in next videos section

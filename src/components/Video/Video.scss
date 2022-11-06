@@ -7,13 +7,21 @@
     background-color: $dark-black;
     height: auto;
     width: 100%;
-    z-index: 1;
+    display: flex;
+    justify-content: center;
 
     &__selected {
-        height: auto;
-        width: 100%;
-        z-index: 20;
+        max-height: 27rem;
+        width:  100%;
         object-fit: contain;
+
+        @include tablet {
+            max-height: 30rem;
+        }
+
+        @include desktop {
+            max-height: 36.5rem;
+        }
     }
 
 }

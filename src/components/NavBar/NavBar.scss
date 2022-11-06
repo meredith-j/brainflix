@@ -46,6 +46,10 @@ input {
         @include tablet {
             height: 1.75rem;
         }
+
+        @include desktop {
+            height: 2.25rem;
+        }
     }
 
     &__items {
