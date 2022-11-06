@@ -28,6 +28,10 @@
             gap: none;
             padding: 0 0 1.5rem 0;
         }
+
+        @include desktop {
+            padding: 0 0 1rem 0;
+        }
     }
 
     &__details {
@@ -73,5 +77,9 @@
     &__comments {
         font-weight: 600;
         padding: 2rem 0 0 0;
+
+        @include desktop {
+            padding: 3rem 0 0 0;
+        }
     }
 }

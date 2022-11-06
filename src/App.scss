@@ -14,11 +14,14 @@ body {
 }
 
 .main {
+    
     &__written-content {
         @include desktop {
             display: flex;
             flex-direction: row;
             padding: 0 0 0 5rem;
+            max-width: 120rem;
+            margin: auto;
         }
     }
 
