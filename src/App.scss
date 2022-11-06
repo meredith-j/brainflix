@@ -18,12 +18,13 @@ body {
         @include desktop {
             display: flex;
             flex-direction: row;
+            padding: 0 0 0 5rem;
         }
     }
 
     &__section {
         @include desktop {
-            width: 70%;
+            width: 60%;
         }
     }
 }

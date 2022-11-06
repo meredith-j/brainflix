@@ -13,6 +13,9 @@
         padding: 0 45% 0 0;
     }
 
+    @include desktop {
+        padding: 0 10% 0 0;
+    }
     &__header {
         padding: 1.5rem 0;
     }
