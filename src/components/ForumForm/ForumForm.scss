@@ -76,9 +76,12 @@ textarea {
         outline: none;
 
         @include tablet {
-            width: 10rem;
             height: 3.5rem;
             width: 55vw;
+        }
+
+        @include desktop {
+            width: 25vw;
         }
     }
 
@@ -101,6 +104,10 @@ textarea {
         @include tablet {
             width: 30vw;
             margin: 2rem 0 0 0.5rem;
+        }
+
+        @include desktop {
+            width: 17vw;
         }
     }
 }
