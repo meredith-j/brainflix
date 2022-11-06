@@ -7,6 +7,11 @@
 .next-videos {
     border-top: 0.1rem solid $mercury;
     margin: 0 2rem 1.5rem 2rem;
+    
+    
+    @include tablet {
+        padding: 0 45% 0 0;
+    }
 
     &__header {
         padding: 1.5rem 0;
@@ -32,6 +37,14 @@
         border-radius: 0.5rem;
     }
 
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0 0 0.25rem 0;
+    
+    }
+
     &__title {
         overflow: hidden;
         text-overflow: ellipsis;
@@ -39,5 +52,9 @@
         display: -webkit-box;
         -webkit-box-orient: vertical;
         padding: 0 0 0.2rem 0;
+
+        @include tablet {
+            font-size: 1.1rem;
+        }
     }
 }
