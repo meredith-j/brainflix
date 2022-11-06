@@ -4,7 +4,7 @@ import imgUser from '../../assets/images/Mohan-muruge.jpg';
 function ForumForm () {
     return (
             <section className="forum-form">
-                
+            {/* this comments form is not dynamic yet as per sprint 1 instructions */}
                     <div className="forum-form__container">
                         <form id="newComment" className="forum-form__form">
                             <div className="forum-form__container">

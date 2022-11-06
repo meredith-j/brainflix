@@ -40,6 +40,7 @@
         width: 10rem;
         height: 6rem;
         border-radius: 0.5rem;
+        background-color: $mercury;
     }
 
     &__info {
@@ -49,7 +50,7 @@
         padding: 0 0 0.25rem 0;
     
     }
-
+    // these properties ensure that any movie titles that go beyond two lines will be replaced with "..."
     &__title {
         overflow: hidden;
         text-overflow: ellipsis;

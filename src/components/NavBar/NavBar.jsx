@@ -1,5 +1,4 @@
 import imgLogo from '../../assets/logo/BrainFlix-logo.svg';
-import App from '../../App';
 import imgUser from '../../assets/images/Mohan-muruge.jpg';
 import '../NavBar/NavBar.scss';
 
@@ -8,7 +7,8 @@ function NavBar( { App } ) {
       <>
         <div className='navbar'>
             <section className="navbar__heading">
-                <a className='navbar__link' href={ App }>
+              {/* this logo links to home page */}
+                <a className='navbar__link' href="/">
                     <img className="navbar__logo" src={imgLogo} alt="Your profile picture" />
                 </a>
             </section>

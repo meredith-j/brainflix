@@ -17,6 +17,14 @@ textarea {
         outline: none;
     }
 
+textarea:focus {
+    border: 0.15rem solid $blue;
+}
+
+button:hover {
+    background-color: $dark-blue;
+}
+
 .forum-form {
     padding: 1rem 2rem;
 
@@ -49,7 +57,7 @@ textarea {
     &__image {
         height: 3.75rem;
         width: 3.75rem;
-        border-radius: 2rem;
+        border-radius: 50%;
         object-position: left;
         object-fit: cover;
         margin: 2.2rem 0;

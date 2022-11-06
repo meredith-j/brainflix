@@ -4,8 +4,8 @@
 @use '../../styles/partials/colours' as *;
 
 input {
-    ::placeholder {
-        color: $black;
+    :active {
+        border: 0.1rem solid $dark-blue;
     }
         font-family: 'Avenir';
         width: 80%;
@@ -19,6 +19,14 @@ input {
         background-size: 1.75rem;
         background-position: 1rem;
         outline: none;
+}
+
+input:focus {
+    border: 0.15rem solid $blue;
+}
+
+button:hover {
+    background-color: $dark-blue;
 }
 
 .navbar {
@@ -131,7 +139,7 @@ input {
     &__user-photo {
         height: 3.75rem;
         width: 3.75rem;
-        border-radius: 2rem;
+        border-radius: 50%;
         object-position: left;
         object-fit: cover;
 

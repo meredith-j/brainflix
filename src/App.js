@@ -10,10 +10,13 @@ import videoDetails from './data/video-details.json';
 
 function App() {
 
+  // this specifies what video will be playing when users navigate to the main page
   const [ featuredVideo, setFeaturedVideo ] = useState(videoDetails[0])
-  //in future sprints: we will need to add setVideoObjects to the below const
+
+  // in future sprints: we will need to add setVideoObjects to the below const
   const [ videoObjects ] = useState(videos)
 
+  // the below functions tell the two different data files to match whichever video is featured/playing and to remove it from the next videos list
   function changeFeaturedVideo (videoId) {
     const selectedVideo =  videoDetails.find((video)=>{
       return videoId === video.id
@@ -25,6 +28,7 @@ function App() {
     return video.id === featuredVideo.id
   })
 
+  // this part of the function removes (splices) the featured video from the next videos list  
   const videosCopy = [...videoObjects]
   videosCopy.splice(videosCopy.indexOf(removeSelectedVideo), 1)
 
@@ -34,6 +38,8 @@ function App() {
     <Video 
     featuredVideo = { featuredVideo }
     />
+    {/* the sections/divs here help us style our website for the desktop view -- we are using flexbox
+    to move the next videos section up beside the current video info & comments section */}
     <section className='main__written-content'>
     <div className='main__section'>
     <VideoInfo 

@@ -2,6 +2,9 @@
 @use './mixins' as *;
 @use './colours' as *;
 
+
+// here are all of the fonts we will need for this project
+
 @font-face {
     font-family: 'Avenir';
     src: url(../../assets/fonts/AvenirNextLTPro-Regular.woff2) format('woff2');
@@ -9,6 +12,7 @@
     font-weight: 400;
 }
 
+// this bold font is not the same as the font in the mock ups, even when i converted the specific otf files to woff & woff2
 @font-face {
     font-family: 'Avenir';
     src: url(../../assets/fonts/AvenirNextLTPro-Bold.woff2) format('woff2');
@@ -56,19 +60,5 @@ p {
     @include tablet {
         font-size: 1rem;
         font-weight: 400;
-    }
-}
-
-/*not used yet - assuming i will need it for
-sprint 2 */
-button {
-    font-size: 0.625rem;
-    font-weight: 700;
-    line-height: 1.25rem;
-
-    @include tablet {
-        font-size: 0.75rem;
-        font-weight: 700;
-        line-height: 1.25rem;
     }
 }

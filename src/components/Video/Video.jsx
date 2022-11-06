@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import '../Video/Video.scss';
 
+// this is for the featured vide only. the next videos are displayed in "NextVideos"
 function Video ( { featuredVideo } ) {
     return (
         <>

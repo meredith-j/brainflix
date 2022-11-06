@@ -4,12 +4,14 @@
 @use '../../styles/partials/colours' as *;
 
 .video {
+    // this is styling for the black background around the video
     background-color: $dark-black;
     height: auto;
     width: 100%;
     display: flex;
     justify-content: center;
 
+    // this is styling for the actual video
     &__selected {
         max-height: 27rem;
         width:  100%;
