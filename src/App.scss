@@ -12,3 +12,18 @@ body {
     box-sizing: border-box;
     margin: 0;
 }
+
+.main {
+    &__written-content {
+        @include desktop {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    &__section {
+        @include desktop {
+            width: 70%;
+        }
+    }
+}

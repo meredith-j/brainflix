@@ -34,16 +34,22 @@ function App() {
     <Video 
     featuredVideo = { featuredVideo }
     />
+    <section className='main__written-content'>
+    <div className='main__section'>
     <VideoInfo 
     featuredVideo= { featuredVideo }
     />
     <Forum 
     featuredVideo = { featuredVideo }
     />
+    </div>
+    <div className='main__sidebar'>
     <NextVideos 
     videos = { videosCopy }
     changeFeaturedVideo = { changeFeaturedVideo}
     />
+    </div>
+    </section>
     </>
   );
 }

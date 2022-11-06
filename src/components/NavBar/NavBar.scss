@@ -32,6 +32,12 @@ input {
         justify-content: space-between;
     }
 
+    @include desktop {
+        padding: 1rem 6rem 1rem 6rem;
+        max-width: 130rem;
+        margin: auto;
+    }
+
     &__logo {
         display: block;
         height: 2.5rem;
