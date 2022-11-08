@@ -13,7 +13,7 @@ export default function HomePage () {
   // this specifies what video will be playing when users navigate to the main page
   const [ featuredVideo, setFeaturedVideo ] = useState(videoDetails[0])
 
-  // in future sprints: we will need to add setVideoObjects to the below const
+  // sets the video information that displays 
   const [ videoObjects ] = useState(videos)
 
   //the below functions tell the two different data files to match whichever video is featured/playing and to remove it from the next videos list
