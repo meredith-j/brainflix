@@ -5,6 +5,7 @@ import NextVideos from "../../components/NextVideos/NextVideos";
 import { useState } from 'react';
 import videos from '../../data/videos.json';
 import videoDetails from '../../data/video-details.json';
+import axios from 'axios';
 
 
 export default function HomePage () {
@@ -15,7 +16,7 @@ export default function HomePage () {
   // in future sprints: we will need to add setVideoObjects to the below const
   const [ videoObjects ] = useState(videos)
 
-  // the below functions tell the two different data files to match whichever video is featured/playing and to remove it from the next videos list
+  //the below functions tell the two different data files to match whichever video is featured/playing and to remove it from the next videos list
   function changeFeaturedVideo (videoId) {
     const selectedVideo =  videoDetails.find((video)=>{
       return videoId === video.id
