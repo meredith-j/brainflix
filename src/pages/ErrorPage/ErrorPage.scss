@@ -1,0 +1,26 @@
+@use '../../styles/partials/breakpoints' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/colours' as *;
+
+.error {
+    &__page {
+        background-image: url('../../assets/images/Mohan-muruge.jpg');
+        background-size: 3rem;
+        background-repeat: round;
+        height: 100vh;
+    }
+
+    &__heading {
+        color: $white;
+        text-align: center;
+        padding: 3rem 6rem;
+    }
+
+    &__emoji {
+        color: $white;
+        text-align: center;
+        padding: 3rem 6rem;
+        -webkit-transform: rotate(90deg);
+    }
+}
