@@ -52,6 +52,19 @@ h3 {
     line-height: 1.72rem;
 }
 
+// join the conversation & next videos header
+h4 {
+    font-size: 1.15rem;
+    font-weight: 400;
+    line-height: 2rem;
+    color: $silver;
+    text-transform: uppercase;
+
+    @include tablet {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+}
 
 p {
     font-size: 1.25rem;
