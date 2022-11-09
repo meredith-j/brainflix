@@ -6,6 +6,7 @@ import { useState } from 'react';
 import videos from '../../data/videos.json';
 import videoDetails from '../../data/video-details.json';
 import axios from 'axios';
+import { useParams } from "react-router-dom";
 
 
 export default function HomePage () {
@@ -16,16 +17,15 @@ export default function HomePage () {
   // sets the video information that displays 
   const [ videoObjects ] = useState(videos)
 
+  const { videoId } = useParams();
+
   //the below functions tell the two different data files to match whichever video is featured/playing and to remove it from the next videos list
-  function changeFeaturedVideo (videoId) {
-    const selectedVideo =  videoDetails.find((video)=>{
-      return videoId === video.id
-    })
-    setFeaturedVideo(selectedVideo)
-  }
+     setFeaturedVideo(videoDetails.find((video)=>{
+       return videoId === video.id
+     }))
 
   const removeSelectedVideo =  videoObjects.find((video)=>{
-    return video.id === featuredVideo.id
+    return video.id === videoId
   })
 
   // this part of the function removes (splices) the featured video from the next videos list  
@@ -51,7 +51,6 @@ export default function HomePage () {
         <div className='main__sidebar'>
         <NextVideos 
         videos = { videosCopy }
-        changeFeaturedVideo = { changeFeaturedVideo}
         />
         </div>
         </section>
