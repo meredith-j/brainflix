@@ -2,30 +2,46 @@ import Video from "../../components/Video/Video";
 import VideoInfo from "../../components/VideoInfo/VideoInfo";
 import Forum from "../../components/Forum/Forum";
 import NextVideos from "../../components/NextVideos/NextVideos";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import videos from '../../data/videos.json';
-import videoDetails from '../../data/video-details.json';
+//import videoDetails from '../../data/video-details.json';
 import axios from 'axios';
 import { useParams } from "react-router-dom";
 
 
 export default function HomePage () {
 
+  const { id } = useParams();
+
+  const videoDetailsUrl ='https://project-2-api.herokuapp.com/videos/?api_key=9c2a3d3c-5ac4-455e-bbd5-e111b0e57936';
+  const videosUrl = `https://project-2-api.herokuapp.com/videos/${id}?api_key=9c2a3d3c-5ac4-455e-bbd5-e111b0e57936`;
+
   // this specifies what video will be playing when users navigate to the main page
-  const [ featuredVideo, setFeaturedVideo ] = useState(videoDetails[0])
+  const [ featuredVideo, setFeaturedVideo ] = useState([])
 
   // sets the video information that displays 
-  const [ videoObjects ] = useState(videos)
+  // const [ videoObjects ] = useState(videos);
 
-  const { videoId } = useParams();
+  useEffect (() => {
+    axios.get(videoDetailsUrl)
+    .then((response) => {
+      if (id === "") {
+      return featuredVideo;
+    }
+    })}, []);
+
+  console.log(featuredVideo);
 
   //the below functions tell the two different data files to match whichever video is featured/playing and to remove it from the next videos list
-     setFeaturedVideo(videoDetails.find((video)=>{
-       return videoId === video.id
-     }))
+  useEffect(() => {
+      axios.get(videosUrl)
+      .then((response) => {
+        setFeaturedVideo(response.data);
+    }
+  )}, [id])
 
   const removeSelectedVideo =  videoObjects.find((video)=>{
-    return video.id === videoId
+    return video.id === id
   })
 
   // this part of the function removes (splices) the featured video from the next videos list  
