@@ -10,7 +10,7 @@ export default function UploadPage () {
             <div className='upload__sections'>
                 <div className='upload__section upload__section--thumbnail'>
                     <h4 className='upload__type'>Video Thumbnail</h4>
-                    <img className='upload__thumbnail' src={ thumbnail }/>
+                    <img className='upload__thumbnail' src={ thumbnail } alt="Your video's thumbnail" />
                 </div>
                 <div className='upload__form'>
                     <div className='upload__section'>

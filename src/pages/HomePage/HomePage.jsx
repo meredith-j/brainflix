@@ -3,10 +3,8 @@ import VideoInfo from "../../components/VideoInfo/VideoInfo";
 import Forum from "../../components/Forum/Forum";
 import NextVideos from "../../components/NextVideos/NextVideos";
 import { useState, useEffect } from 'react';
-import videosData from '../../data/videos.json';
-import videoDetailsData from '../../data/video-details.json';
-// import axios from 'axios';
 import { useParams } from "react-router-dom";
+import axios from "axios";
 
 
 export default function HomePage () {
@@ -14,24 +12,30 @@ export default function HomePage () {
   const { videoId } = useParams()
 
   // sets the video information that displays 
-  const [ videosList ] = useState(videosData)
+  const [ videosList, setVideosList ] = useState(null)
 
   // this specifies what video will be playing when users navigate to the main page
-  const [ featuredVideo, setFeaturedVideo ] = useState(videoDetailsData[0])
-  
-  // const videoDetailsUrl ='https://project-2-api.herokuapp.com/videos/?api_key=9c2a3d3c-5ac4-455e-bbd5-e111b0e57936';
-  // const videosUrl = `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=9c2a3d3c-5ac4-455e-bbd5-e111b0e57936`;
+  const [ featuredVideo, setFeaturedVideo ] = useState(null)
   
   useEffect(()=>{
-    if(!videoId){
-        return 
-    }
+    axios.get("https://project-2-api.herokuapp.com/videos/?api_key=9c2a3d3c-5ac4-455e-bbd5-e111b0e57936")
+    .then((response) => {
+      setVideosList(response.data)
+      const id = videoId || response.data[0].id
+      return axios.get(`https://project-2-api.herokuapp.com/videos/${id}?api_key=9c2a3d3c-5ac4-455e-bbd5-e111b0e57936`)
+      })
+      .then(response => {
+        setFeaturedVideo(response.data)
+    })
 
-    const foundVideo = videoDetailsData.find((video) => videoId === video.id);
-    setFeaturedVideo(foundVideo)
   },[videoId])
 
-  console.log(videoId)
+
+
+
+  if(!videosList || !featuredVideo){
+    return <h1>loading...</h1>
+  }
 
 const filteredVideos = videosList.filter((video) => video.id !== featuredVideo.id);
 
