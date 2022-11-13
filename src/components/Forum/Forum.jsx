@@ -33,8 +33,8 @@ function Forum ( { featuredVideo } ) {
         { featuredVideo.comments.map((comment) => {
             // the above function accesses the array of comments from the array of movie details
             return (
-                <div className='forum'>
-                    <article className="forum__container" key={ comment.id }>
+                <div className='forum' key={ comment.id }>
+                    <article className="forum__container">
                         <div className='forum__image'>
                             <div className='forum__photo' alt={ comment.name }></div>
                         </div>

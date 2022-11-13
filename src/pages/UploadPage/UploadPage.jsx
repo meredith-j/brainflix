@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import thumbnail from '../../assets/images/Upload-video-preview.jpg';
 
 export default function UploadPage () {
+
     return (
         <section className='upload'>
             <h1 className='upload__header'>Upload Video</h1>
