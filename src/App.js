@@ -4,6 +4,7 @@ import NavBar from './components/NavBar/NavBar';
 import HomePage from './pages/HomePage/HomePage';
 import UploadPage from './pages/UploadPage/UploadPage';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
+import UploadConfirmationPage from './pages/UploadConfirmationPage/UploadConfirmationPage';
 
 function App() {  
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={ <HomePage />} />
           <Route path="/videos/:videoId" element={ <HomePage /> } />
           <Route path="/upload" element={ <UploadPage />} />
+          <Route path="/upload-confirmed" element={ <UploadConfirmationPage />} />
           <Route path="*" element={ <ErrorPage /> } />
         </Routes>
     </BrowserRouter>

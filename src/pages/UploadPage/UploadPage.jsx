@@ -24,7 +24,7 @@ export default function UploadPage () {
                 </div>
             </div>
             <div className='upload__options'>
-                <button className="upload__submit">Publish</button>
+                <Link to="/upload-confirmed"><button className="upload__submit">Publish</button></Link>
                 <Link to="/"><button className="upload__cancel">Cancel</button></Link>
             </div>
         </section>
