@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import '../VideoInfo/VideoInfo.scss';
 import views from '../../assets/icons/views.svg';
 import likes from '../../assets/icons/likes.svg';
@@ -40,11 +39,11 @@ function VideoInfo ( { featuredVideo } ) {
                     </section>
                     <section className='video-info__details'>
                         <section className='video-info__engagement'>
-                            <img className='video-info__views' src={views} />
+                            <img className='video-info__views' src={views} alt="views icon"/>
                             <p className='video-info__detail'>{ featuredVideo.views }</p>
                         </section>
                         <section className='video-info__engagement'>
-                            <img className='video-info__likes' src={likes} />
+                            <img className='video-info__likes' src={likes} alt="likes icon" />
                             <p className='video-info__detail'>{ featuredVideo.likes }</p>
                         </section>
                     </section>

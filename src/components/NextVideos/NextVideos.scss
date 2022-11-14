@@ -8,14 +8,18 @@
     border-top: 0.1rem solid $mercury;
     margin: 0 2rem 1.5rem 2rem;
     
-    
     @include tablet {
         padding: 0 45% 0 0;
     }
 
     @include desktop {
-        padding: 0 10% 0 0;
-        border: none;
+        margin: 0 2rem 1.5rem 0;
+    }
+
+    @include desktop {
+        padding: 0 10% 0 2rem;
+        border-top: none;
+        border-left: 0.1rem solid $mercury;
     }
 
     &__header {
@@ -23,6 +27,8 @@
     }
 
     &__card {
+        text-decoration: none;
+        color: black;
         padding: 0 0 1.5rem 0;
         display: flex;
         flex-direction: row;

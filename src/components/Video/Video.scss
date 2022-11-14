@@ -14,15 +14,19 @@
     // this is styling for the actual video
     &__selected {
         max-height: 27rem;
-        width:  100%;
+        width: 100%;
         object-fit: contain;
 
         @include tablet {
             max-height: 30rem;
+            width: 50rem;
+            object-fit: contain;
         }
 
         @include desktop {
-            max-height: 36.5rem;
+            max-height: 48rem;
+            width: 67rem;
+            object-fit: contain;
         }
     }
 

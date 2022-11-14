@@ -10,7 +10,7 @@ function NavBar() {
             <section className="navbar__heading">
               {/* this logo links to home page */}
                 <Link to="/">
-                    <img className="navbar__logo" src={imgLogo} alt="Your profile picture" />
+                    <img className="navbar__logo" src={imgLogo} alt="Brainflix logo" />
                 </Link>
             </section>
             <section className='navbar__items'>
@@ -19,7 +19,7 @@ function NavBar() {
                   <Link to="/upload"><button className='navbar__upload'>Upload</button></Link>
               </section>
               <div className='navbar__user-info'>
-                  <img className='navbar__user-photo' src={imgUser}/>
+                  <img className='navbar__user-photo' src={imgUser} alt="Mohan Muruge" />
               </div>
             </section>
         </div>

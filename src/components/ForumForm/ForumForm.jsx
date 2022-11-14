@@ -8,7 +8,7 @@ function ForumForm () {
                     <div className="forum-form__container">
                         <form id="newComment" className="forum-form__form">
                             <div className="forum-form__container">
-                                <img className="forum-form__image" src={ imgUser } alt="your profile image" />
+                                <img className="forum-form__image" src={ imgUser } alt="Mohan Muruge" />
                             </div>
                             <div className="forum-form__container">
                                 <div className='forum-form__container--tablet'>
