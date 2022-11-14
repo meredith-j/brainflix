@@ -9,18 +9,28 @@
         background-size: 3rem;
         background-repeat: round;
         height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 2rem;
     }
 
     &__heading {
         color: $white;
         text-align: center;
-        padding: 3rem 6rem;
+        padding: 3rem 0 0 0;
+
+        @include tablet {
+            padding: 6rem 0 0 0;
+        }
     }
 
-    &__emoji {
-        color: $white;
-        text-align: center;
-        padding: 3rem 6rem;
-        -webkit-transform: rotate(90deg);
+    &__image {
+        width: 100%;
+
+        @include tablet {
+            width: 25rem;
+            margin: auto;
+        }
     }
 }

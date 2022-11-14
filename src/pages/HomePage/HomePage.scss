@@ -2,3 +2,13 @@
 @use '../../styles/partials/fonts' as *;
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/colours' as *;
+
+.loading {
+    padding: 1rem 2rem;
+
+    &__text {
+    color: $blue;
+    font-size: 3rem;
+    text-align: center;
+    padding: 1rem;}
+}

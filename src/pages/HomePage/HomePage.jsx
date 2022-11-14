@@ -5,6 +5,7 @@ import NextVideos from "../../components/NextVideos/NextVideos";
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import './HomePage.scss';
 
 
 export default function HomePage () {
@@ -34,7 +35,7 @@ export default function HomePage () {
 
 
   if(!videosList || !featuredVideo){
-    return <h1 className="main__loading">loading...</h1>
+    return <h1 className="loading__text">loading...</h1>
   }
 
 const filteredVideos = videosList.filter((video) => video.id !== featuredVideo.id);
