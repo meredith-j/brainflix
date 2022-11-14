@@ -34,7 +34,7 @@ export default function HomePage () {
 
 
   if(!videosList || !featuredVideo){
-    return <h1>loading...</h1>
+    return <h1 className="main__loading">loading...</h1>
   }
 
 const filteredVideos = videosList.filter((video) => video.id !== featuredVideo.id);

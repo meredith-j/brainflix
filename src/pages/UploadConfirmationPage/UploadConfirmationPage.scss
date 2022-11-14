@@ -1,0 +1,41 @@
+@use '../../styles/partials/breakpoints' as *;
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/colours' as *;
+
+
+.confirmed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 2rem;
+
+    &__image {
+        width: 100%;
+
+        @include tablet {
+            width: 30rem;
+        }
+    }
+
+    &__heading {
+        color: $blue;
+        text-align: center;
+        padding: 1rem 0 2rem 0;
+    }
+
+    &__home-button {
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        color: $white;
+        width: 92vw;
+        background-color: $blue;
+        padding: 1.25rem;
+        border-radius: 0.5rem;
+        border: none;
+
+        @include tablet {
+            width: 16rem;
+        }
+    }
+}
