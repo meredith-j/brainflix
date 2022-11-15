@@ -32,28 +32,38 @@
         padding: 0 0 1.5rem 0;
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
-        gap: 1rem;
+        //gap: 1rem;
+        width: 100%;
     }
     
     &__video {
+        width: 7rem;
+        height: 4rem;
+
+        @include tablet{
         width: 10rem;
         height: 6rem;
+        }
     }
 
     &__thumbnail {
         object-fit: cover;
-        width: 10rem;
-        height: 6rem;
+        width: 7rem;
+        height: 4rem;
         border-radius: 0.5rem;
         background-color: $mercury;
+
+        @include tablet {
+            width: 10rem;
+            height: 6rem;
+        }
     }
 
     &__info {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        padding: 0 0 0.25rem 0;
+        justify-content: flex-start;
+        padding: 0 0 0.25rem 1rem;
     
     }
     // these properties ensure that any movie titles that go beyond two lines will be replaced with "..."
@@ -63,10 +73,19 @@
         -webkit-line-clamp: 2;
         display: -webkit-box;
         -webkit-box-orient: vertical;
-        padding: 0 0 0.2rem 0;
+        padding: 0 0 0.2rem 10;
 
         @include tablet {
             font-size: 1.1rem;
+            padding: 0 0 0.2rem 0;
+        }
+    }
+
+    &__channel {
+        padding: 0 0 0.2rem 0;
+
+        @include tablet {
+            padding: 0 0 0.2rem 0;
         }
     }
 }
