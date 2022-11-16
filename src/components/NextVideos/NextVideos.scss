@@ -4,7 +4,7 @@
 
 
 .next-videos {
-    border-top: 0.1rem solid $mercury;
+    border-top: 0.1rem solid $border-colour;
     margin: 0 1rem 1.5rem 1rem;
     
     @include tablet {
@@ -18,7 +18,7 @@
     @include desktop {
         padding: 0 15% 0 2rem;
         border-top: none;
-        border-left: 0.1rem solid $mercury;
+        border-left: 0.1rem solid $border-colour;
     }
 
     &__header {
@@ -50,7 +50,7 @@
         width: 7.5rem;
         height: 4.5rem;
         border-radius: 0.5rem;
-        background-color: $mercury;
+        background-color: $border-colour;
 
         @include tablet {
             width: 10rem;

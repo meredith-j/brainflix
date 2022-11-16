@@ -11,7 +11,7 @@
 
     &__title {
         padding: 0 0 1.75rem 0;
-        border-bottom: 0.1rem solid $mercury;
+        border-bottom: 0.1rem solid $border-colour;
 
         @include tablet {
             border: none;
@@ -56,7 +56,7 @@
     }
 
     &__detail {
-        color: $silver;
+        color: $icon-colour;
     }
 
     &__engagement {
@@ -76,7 +76,7 @@
 
     &__description {
         padding: 1.5rem 1.5rem 0 0;
-        border-top: 0.1rem solid $mercury;
+        border-top: 0.1rem solid $border-colour;
     }
 
     &__comments {

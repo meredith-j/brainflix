@@ -1,5 +1,4 @@
 @use '../../styles/partials/breakpoints' as *;
-@use '../../styles/partials/fonts' as *;
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/colours' as *;
 
@@ -15,7 +14,7 @@
     }
 
     &__container {
-        border-top: 0.1rem solid $mercury;
+        border-top: 0.1rem solid $border-colour;
         padding: 1rem 0 0 0;
         display: flex;
         flex-direction: row;
@@ -33,7 +32,7 @@
     }
 
     &__photo {
-        background-color: $mercury;
+        background-color: $border-colour;
         width: 3rem;
         height: 3rem;
         border-radius: 50%;
@@ -56,7 +55,7 @@
     }
 
     &__date {
-        color: $silver;
+        color: $icon-colour;
     }
 
     &__comment {

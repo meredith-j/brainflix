@@ -1,10 +1,9 @@
 @use '../../styles/partials/breakpoints' as *;
-@use '../../styles/partials/fonts' as *;
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/colours' as *;
 
 input:focus {
-    border: 0.15rem solid $blue;
+    border: 0.15rem solid $button-colour;
 }
 
 .navbar {
@@ -61,7 +60,7 @@ input:focus {
         padding: 1rem 0 1rem 3rem;
         font-size: 1.25rem;
         border-radius: 0.5rem;
-        border: solid $mercury 0.15rem;
+        border: solid $border-colour 0.15rem;
         background-color: #FAFAFA;
         font-family: 'Avenir';
         width: 70%;
@@ -85,14 +84,14 @@ input:focus {
 
     &__upload {
         :hover {
-            background-color: $dark-blue;
+            background-color: $hover-colour;
         }
 
         width: 91%;
         margin: 0 0 0 1rem;
         text-transform: uppercase;
         font-size: 1.2rem;
-        background-color: $blue;
+        background-color: $button-colour;
         color: white;
         border: none;
         border-radius: 0.5rem;

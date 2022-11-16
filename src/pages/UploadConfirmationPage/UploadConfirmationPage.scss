@@ -18,7 +18,7 @@
     }
 
     &__heading {
-        color: $blue;
+        color: $hover-colour;
         text-align: center;
         padding: 1rem 0 2rem 0;
     }
@@ -26,9 +26,9 @@
     &__home-button { 
         text-transform: uppercase;
         font-size: 1.2rem;
-        color: $white;
+        color: $secondary-text-colour;
         width: 92vw;
-        background-color: $blue;
+        background-color: $button-colour;
         padding: 1.25rem;
         border-radius: 0.5rem;
         border: none;

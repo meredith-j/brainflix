@@ -4,7 +4,7 @@
 
 textarea {
     ::placeholder {
-        color: $black;
+        color: $main-text-colour;
     }
         font-family: 'Avenir';
         width: 10%;
@@ -18,11 +18,11 @@ textarea {
     }
 
 textarea:focus {
-    border: 0.15rem solid $blue;
+    border: 0.15rem solid $button-colour;
 }
 
 button:hover {
-    background-color: $dark-blue;
+    background-color: $hover-colour;
 }
 
 .forum-form {
@@ -81,7 +81,7 @@ button:hover {
         font-size: 1.25rem;
         border-radius: 0.5rem;
         background-color: #FAFAFA;
-        border: 0.1rem solid $mercury;
+        border: 0.1rem solid $border-colour;
         outline: none;
 
         @include tablet {
@@ -100,7 +100,7 @@ button:hover {
         margin: 1.5rem 0 0.5rem 0;
         text-transform: uppercase;
         font-size: 1.3rem;
-        background-color: $blue;
+        background-color: $button-colour;
         color: white;
         border: none;
         border-radius: 0.5rem;

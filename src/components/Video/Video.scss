@@ -1,11 +1,10 @@
 @use '../../styles/partials/breakpoints' as *;
-@use '../../styles/partials/fonts' as *;
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/colours' as *;
 
 .video {
     // this is styling for the black background around the video
-    background-color: $dark-black;
+    background-color: $secondary-colour;
     height: auto;
     width: 100%;
     display: flex;
@@ -13,19 +12,19 @@
 
     // this is styling for the actual video
     &__selected {
-        max-height: 27rem;
+        max-height: 20rem;
         width: 100%;
         object-fit: contain;
 
         @include tablet {
-            max-height: 30rem;
-            width: 50rem;
+            min-height: 24.5rem;
+            width: auto;
             object-fit: contain;
         }
 
         @include desktop {
-            max-height: 48rem;
-            width: 67rem;
+            max-height: 29rem;
+            width: auto;
             object-fit: contain;
         }
     }

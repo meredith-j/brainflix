@@ -36,7 +36,7 @@ h2 {
     font-size: 1rem;
     font-weight: 600;
     line-height: 2rem;
-    color: $silver;
+    color: $icon-colour;
     text-transform: uppercase;
 
     @include tablet {
@@ -61,7 +61,7 @@ h4 {
     font-size: 1.15rem;
     font-weight: 400;
     line-height: 2rem;
-    color: $silver;
+    color: $icon-colour;
     text-transform: uppercase;
 
     @include tablet {
