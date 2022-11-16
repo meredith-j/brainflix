@@ -32,6 +32,10 @@ button:hover {
     padding: 1rem 2rem 0 2rem;
     }
 
+    @include desktop {
+        padding: 1rem 2rem 0 0;
+    }
+
     &__form {
     display: flex;
     flex-direction: row;
@@ -44,7 +48,7 @@ button:hover {
         gap: 0.5rem;
         }
     }
-    
+
     &__container {
         display: flex;
         flex-direction: column;
