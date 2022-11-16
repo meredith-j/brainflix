@@ -2,16 +2,6 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/colours' as *;
 
-body {
-    font-family: 'Avenir';
-    margin: 0;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-}
-
 .video-info {
     padding: 2rem 1rem 1rem 1rem;
 

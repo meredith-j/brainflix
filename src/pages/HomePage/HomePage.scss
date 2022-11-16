@@ -11,3 +11,9 @@
     text-align: center;
     padding: 1rem;}
 }
+
+.main {
+    &__written-content {
+        max-width: 82rem;
+    }
+}

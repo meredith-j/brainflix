@@ -5,7 +5,7 @@
 
 .next-videos {
     border-top: 0.1rem solid $mercury;
-    margin: 0 2rem 1.5rem 2rem;
+    margin: 0 1rem 1.5rem 1rem;
     
     @include tablet {
         padding: 0 45% 0 0;
@@ -16,7 +16,7 @@
     }
 
     @include desktop {
-        padding: 0 10% 0 2rem;
+        padding: 0 15% 0 2rem;
         border-top: none;
         border-left: 0.1rem solid $mercury;
     }
@@ -36,8 +36,8 @@
     }
     
     &__video {
-        width: 7rem;
-        height: 4rem;
+        width: 7.5rem;
+        height: 4.5rem;
 
         @include tablet{
         width: 10rem;
@@ -47,8 +47,8 @@
 
     &__thumbnail {
         object-fit: cover;
-        width: 7rem;
-        height: 4rem;
+        width: 7.5rem;
+        height: 4.5rem;
         border-radius: 0.5rem;
         background-color: $mercury;
 
@@ -61,7 +61,7 @@
     &__info {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: space-between;
         padding: 0 0 0.25rem 1rem;
     
     }
@@ -73,6 +73,7 @@
         display: -webkit-box;
         -webkit-box-orient: vertical;
         padding: 0 0 0.2rem 10;
+        line-height: 1.3rem;
 
         @include tablet {
             font-size: 1.1rem;
@@ -81,7 +82,7 @@
     }
 
     &__channel {
-        padding: 0 0 0.2rem 0;
+        padding: 0.25rem 0 0.2rem 0;
 
         @include tablet {
             padding: 0 0 0.2rem 0;

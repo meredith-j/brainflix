@@ -1,5 +1,4 @@
 @use '../../styles/partials/breakpoints' as *;
-@use '../../styles/partials/fonts' as *;
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/colours' as *;
 
@@ -92,7 +91,7 @@ button:hover {
 
         @include desktop {
             width: 30vw;
-            max-width: 40rem;
+            max-width: 23.5rem;
             }
     }
 
@@ -119,7 +118,7 @@ button:hover {
 
         @include desktop {
             width: 17vw;
-            max-width: 22rem;
+            max-width: 14.5rem;
         }
         
     }
