@@ -1,5 +1,4 @@
 @use '../../styles/partials/breakpoints' as *;
-@use '../../styles/partials/fonts' as *;
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/colours' as *;
 
@@ -14,7 +13,7 @@ body {
 }
 
 .video-info {
-    padding: 2rem 2rem 1rem 2rem;
+    padding: 2rem 1rem 1rem 1rem;
 
     @include desktop {
         padding: 2rem 0 1rem 2rem;
@@ -33,13 +32,14 @@ body {
         padding: 1.5rem 0;
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
-        border-bottom: 0.1rem solid $mercury;
+        justify-content: space-between;
+        max-width: 25rem;
 
         @include tablet {
             justify-content: space-between;
             gap: none;
             padding: 0 0 2em 0;
+            max-width: 80rem;
         }
 
         @include desktop {
@@ -86,6 +86,7 @@ body {
 
     &__description {
         padding: 1.5rem 1.5rem 0 0;
+        border-top: 0.1rem solid $mercury;
     }
 
     &__comments {
