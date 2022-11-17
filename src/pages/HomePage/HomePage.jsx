@@ -32,9 +32,6 @@ export default function HomePage () {
 
   },[videoId])
 
-
-
-
   if(!videosList || !featuredVideo){
     return <h1 className="loading__text">loading...</h1>
   }
