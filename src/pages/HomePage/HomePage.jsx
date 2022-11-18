@@ -19,12 +19,12 @@ export default function HomePage () {
   const [ featuredVideo, setFeaturedVideo ] = useState(null)
   
   useEffect(()=>{
-    axios.get("https://project-2-api.herokuapp.com/videos/?api_key=9c2a3d3c-5ac4-455e-bbd5-e111b0e57936")
+    axios.get("http://localhost:8080/videos")
     .then((response) => {
       setVideosList(response.data)
       window.scrollTo(0, 0)
       const id = videoId || response.data[0].id
-      return axios.get(`https://project-2-api.herokuapp.com/videos/${id}?api_key=9c2a3d3c-5ac4-455e-bbd5-e111b0e57936`)
+      return axios.get(`http://localhost:8080/videos/${id}`)
       })
       .then(response => {
         setFeaturedVideo(response.data)
