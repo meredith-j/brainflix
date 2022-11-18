@@ -29,11 +29,14 @@ export default function HomePage () {
       .then(response => {
         setFeaturedVideo(response.data)
     })
+    .catch((error) => {
+      console.log("Oh no! It looks like the video you are looking for does not exist.")
+    })
 
   },[videoId])
 
   if(!videosList || !featuredVideo){
-    return <h1 className="loading__text">loading...</h1>
+    return <h1 className="loading__text">Loading...</h1>
   }
 
 const filteredVideos = videosList.filter((video) => video.id !== featuredVideo.id);
