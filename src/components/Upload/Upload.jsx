@@ -1,8 +1,33 @@
 import './Upload.scss';
-import { Link } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 import thumbnail from '../../assets/images/Upload-video-preview.jpg';
 
 export default function UploadPage () {
+
+    const navigate = useNavigate();
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+
+        const form = event.target;
+
+        const title = form.title.value
+        const description = form.title.description
+
+        if (title === "" || description === "") {
+            alert("All form fields are required")
+
+            return;
+        }
+
+        navigate("/upload-confirmed");
+
+    }
+
+    const handleCancel = (event) => {
+        navigate("/");
+    }
 
     return (
         <section className='upload'>
@@ -12,20 +37,20 @@ export default function UploadPage () {
                     <h4 className='upload__type'>Video Thumbnail</h4>
                     <img className='upload__thumbnail' src={ thumbnail } alt="Your video's thumbnail" />
                 </div>
-                <div className='upload__form'>
+                <form className='upload__form' onSubmit={handleSubmit}>
                     <div className='upload__section'>
                         <h4 className='upload__type'>Title your video</h4>
-                        <input className="upload__title" id="title" type="text" placeholder="Add a title to your video" />
+                        <input name="title" id="title" type="text" className="upload__title" placeholder="Add a title to your video" />
                     </div>
                     <div className='upload__section'>
                         <h4 className='upload__type'>Add a video description</h4>
                         <textarea name="description" id="description" className="upload__description" placeholder="Add a description to your video"></textarea>
                     </div>
-                </div>
-            </div>
-            <div className='upload__options'>
-                <Link to="/upload-confirmed"><button className="upload__submit">Publish</button></Link>
-                <Link to="/"><button className="upload__cancel">Cancel</button></Link>
+                    <div className='upload__options'>
+                        <button type="submit" className="upload__submit">Publish</button>
+                        <button type="cancel" onClick={handleCancel} className="upload__cancel">Cancel</button>
+                    </div>
+                </form>
             </div>
         </section>
     )
