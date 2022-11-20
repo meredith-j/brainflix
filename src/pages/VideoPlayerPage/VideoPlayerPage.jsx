@@ -1,13 +1,11 @@
+import './VideoPlayerPage.scss';
 import Video from "../../components/Video/Video";
 import VideoInfo from "../../components/VideoInfo/VideoInfo";
 import Forum from "../../components/Forum/Forum";
 import NextVideos from "../../components/NextVideos/NextVideos";
-import ErrorPage from "../ErrorPage/ErrorPage";
 import { useState, useEffect } from 'react';
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-import './VideoPlayerPage.scss';
-
 
 export default function HomePage () {
 
@@ -19,6 +17,8 @@ export default function HomePage () {
   // this specifies what video will be playing when users navigate to the main page
   const [ featuredVideo, setFeaturedVideo ] = useState(null)
   
+  const navigate = useNavigate();
+
   useEffect(()=>{
     axios.get("http://localhost:8080/videos")
     .then((response) => {
@@ -31,8 +31,7 @@ export default function HomePage () {
         setFeaturedVideo(response.data)
     })
     .catch((error) => {
-      <ErrorPage />
-      console.log("Oh no! It looks like the video you are looking for does not exist.")
+      navigate("/*")
     })
 
   },[videoId])

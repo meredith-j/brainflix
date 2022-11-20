@@ -1,0 +1,8 @@
+@use '../../styles/partials/breakpoints' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/colours' as *;
+
+body {
+    margin: auto;
+    max-width: 80rem;
+}
