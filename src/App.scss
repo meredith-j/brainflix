@@ -3,31 +3,8 @@
 @use './styles/partials/mixins' as *;
 @use './styles/partials/colours' as *;
 
-body {
-    font-family: 'Avenir';
-    margin: 0;
-}
-
 * {
+    font-family: 'Avenir';
     box-sizing: border-box;
     margin: 0;
-}
-
-.main {
-    
-    &__written-content {
-        @include desktop {
-            display: flex;
-            flex-direction: row;
-            padding: 0 0 0 5rem;
-            max-width: 120rem;
-            margin: auto;
-        }
-    }
-
-    &__section {
-        @include desktop {
-            width: 60%;
-        }
-    }
 }

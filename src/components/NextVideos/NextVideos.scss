@@ -4,25 +4,22 @@
 
 
 .next-videos {
-    border-top: 0.1rem solid $border-colour;
     margin: 0 1rem 1.5rem 1rem;
     
     @include tablet {
-        padding: 0 45% 0 0;
+        margin: 0 2rem 1.5rem 2rem;
+        max-width: 25rem;
     }
 
     @include desktop {
         margin: 0 2rem 1.5rem 0;
-    }
-
-    @include desktop {
-        padding: 0 15% 0 2rem;
+        padding: 0 1.25rem 0 2rem;
         border-top: none;
         border-left: 0.1rem solid $border-colour;
     }
 
     &__header {
-        padding: 1.5rem 0;
+        padding: 1.5rem 0 2rem 0;
     }
 
     &__card {
@@ -31,8 +28,11 @@
         padding: 0 0 1.5rem 0;
         display: flex;
         flex-direction: row;
-        //gap: 1rem;
-        width: 100%;
+        max-width: 20.6rem;
+
+        @include tablet {
+            max-width: 100%;
+        }
     }
     
     &__video {
@@ -67,17 +67,22 @@
     }
     // these properties ensure that any movie titles that go beyond two lines will be replaced with "..."
     &__title {
+        font-size: 0.9rem;
         overflow: hidden;
         text-overflow: ellipsis;
         -webkit-line-clamp: 2;
         display: -webkit-box;
         -webkit-box-orient: vertical;
-        padding: 0 0 0.2rem 10;
+        padding: 0.2rem 0 0.2rem 10;
         line-height: 1.3rem;
 
         @include tablet {
             font-size: 1.1rem;
-            padding: 0 0 0.2rem 0;
+            padding: 0.3rem 0 0.2rem 0;
+        }
+
+        @include desktop {
+            font-size: 1rem;
         }
     }
 

@@ -7,8 +7,8 @@ input:focus {
 }
 
 .navbar {
-    padding: 1rem 0;
-    max-width: 80rem;
+    padding: 1rem 1rem;
+    width: 100%;
    
     @include tablet {
         padding: 1rem 2.5rem 1rem 2rem;
@@ -21,11 +21,12 @@ input:focus {
     @include desktop {
         padding: 1rem 6rem 1rem 6rem;
         margin: auto;
+        max-width: 80rem;
     }
 
     &__logo {
         display: block;
-        height: 2.5rem;
+        height: 2rem;
         margin: auto;
 
         @include tablet {
@@ -56,15 +57,14 @@ input:focus {
     }
 
     &__search {
-        margin: 1.25rem 0 1rem 1rem;
-        padding: 1rem 0 1rem 3rem;
-        font-size: 1.25rem;
+        margin: 1rem 0;
+        padding: 1rem 0 1rem 3.25rem;
+        font-size: 1rem;
         border-radius: 0.5rem;
         border: solid $border-colour 0.15rem;
         background-color: #FAFAFA;
         font-family: 'Avenir';
-        width: 70%;
-        font-size: 1.25rem;
+        width: 70vw;
         border-radius: 0.5rem;
         background-color: #FAFAFA;
         background-image: url('../../assets/icons/search.svg');
@@ -74,10 +74,16 @@ input:focus {
         outline: none;
 
         @include tablet {
-            font-size: 1.2rem;
-            padding: 1rem 0 1rem 3rem;
-            width: 80%;
+            font-size: 1rem;
+            padding: 1rem 0 1rem 2.5rem;
+            height: 3rem;
+            width: 30vw;
             margin: 0;
+            background-size: 1.25rem;
+        }
+
+        @include desktop {
+            max-width: 24rem;
         }
   
     }
@@ -87,10 +93,9 @@ input:focus {
             background-color: $hover-colour;
         }
 
-        width: 91%;
-        margin: 0 0 0 1rem;
+        width: 100%;
         text-transform: uppercase;
-        font-size: 1.2rem;
+        font-size: 1rem;
         background-color: $button-colour;
         color: white;
         border: none;
@@ -105,22 +110,25 @@ input:focus {
         @include tablet {
             margin: 0;
             padding: 0 0 0 1rem;
-            width: 15rem;
-            height: 3.75rem;
+            width: 12rem;
+            height: 3rem;
+            font-size: 1rem;
+            background-size: 1.5rem;
+            background-position: 0.75rem;
         }
     }
 
     &__user-info {
         position: absolute;
-        left: 78%;
-        top: 4.85rem;
+        right: 1.6rem;
+        top: 4.1rem;
         width: 3rem;
 
         @include tablet {
             position: relative;
             padding: 0.25rem 0 0 1rem;
-            left: auto;
-            top: auto;
+            left: 0;
+            top: 0;
             width: auto;
         }
     
@@ -134,8 +142,8 @@ input:focus {
         object-fit: cover;
 
         @include tablet {
-            height: 3.5rem;
-            width: 3.5rem;
+            height: 3rem;
+            width: 3rem;
         }
     }
 }

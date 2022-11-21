@@ -6,25 +6,26 @@
     // this is styling for the black background around the video
     background-color: $secondary-colour;
     height: auto;
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
+    max-width: none;
 
     // this is styling for the actual video
     &__selected {
-        max-height: 20rem;
-        width: 100%;
+        height: 10rem;
+        width: 20rem;
         object-fit: contain;
 
         @include tablet {
-            min-height: 24.5rem;
-            width: auto;
+            height: 26rem;
+            width: 47rem;
             object-fit: contain;
         }
 
         @include desktop {
-            max-height: 29rem;
-            width: auto;
+            height: 29rem;
+            width: 53rem;
             object-fit: contain;
         }
     }

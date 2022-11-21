@@ -52,11 +52,11 @@ export default function UploadPage () {
                 </div>
                 <div className='upload__form'>
                     <div className='upload__section'>
-                        <h4 className='upload__type'>Title your video</h4>
+                        <label className='upload__type'>Title your video</label>
                         <input name="title" id="title" type="text" className="upload__title" placeholder="Add a title to your video" />
                     </div>
                     <div className='upload__section'>
-                        <h4 className='upload__type'>Add a video description</h4>
+                        <label className='upload__type'>Add a video description</label>
                         <textarea name="description" id="description" className="upload__description" placeholder="Add a description to your video"></textarea>
                     </div>
                     <div className='upload__options'>

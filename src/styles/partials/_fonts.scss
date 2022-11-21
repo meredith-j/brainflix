@@ -22,12 +22,17 @@
 
 //video title
 h1 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 600;
+    line-height: 2rem;
 
     @include tablet {
-        font-size: 2.5rem;
+        font-size: 2rem;
         font-weight: 600;
+    }
+
+    @include desktop {
+        font-size: 1.9rem;
     }
 }
 
@@ -71,7 +76,7 @@ h4 {
 }
 
 p {
-    font-size: 1rem;
+    font-size: 0.85rem;
     font-weight: 400;
 
     @include tablet {

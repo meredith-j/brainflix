@@ -9,11 +9,25 @@
     color: $hover-colour;
     font-size: 3rem;
     text-align: center;
-    padding: 1rem;}
+    padding: 1rem;
+    }
 }
 
 .main {
+
     &__written-content {
-        max-width: 80rem;
+        @include desktop {
+            display: flex;
+            flex-direction: row;
+            padding: 0 0 0 5rem;
+            max-width: 80rem;
+            margin: auto;
+        }
+    }
+
+    &__section {
+        @include desktop {
+            width: 60%;
+        }
     }
 }

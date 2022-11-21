@@ -3,10 +3,10 @@
 @use '../../styles/partials/colours' as *;
 
 .forum {
-    padding: 1rem 2rem;
+    padding: 0 1rem 0 1rem;
 
     @include tablet {
-        padding: 0 2rem 1rem 2rem;
+        padding: 0 2rem;
     }
 
     @include desktop {
@@ -14,7 +14,7 @@
     }
 
     &__container {
-        border-top: 0.1rem solid $border-colour;
+        border-bottom: 0.1rem solid $border-colour;
         padding: 1rem 0 0 0;
         display: flex;
         flex-direction: row;
@@ -22,13 +22,14 @@
         justify-content: center;
 
         @include tablet {
-            margin: 0 0 0.5rem 0;
-            padding: 1.5rem 0 0 0;
+            margin: 0;
+            padding: 1.5rem 0;
             justify-content: flex-start;
         }
 
         @include desktop {
             padding: 1.5rem 2rem 1.5rem 0;
+            margin: 0 0 0 1.45rem;
             justify-content: center;
         }
     }
@@ -38,11 +39,6 @@
         width: 3rem;
         height: 3rem;
         border-radius: 50%;
-
-        @include tablet {
-            width: 3.25rem;
-            height: 3.25rem;
-        }
     }
 
     &__name-date {
@@ -67,6 +63,11 @@
     }
 
     &__comment {
-        line-height: 1.5rem;
+        line-height: 1.35rem;
+        padding: 0 0 1rem 0;
+
+        @include tablet {
+            padding: 0;
+        }
     }
 }
